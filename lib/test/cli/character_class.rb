@@ -1,6 +1,6 @@
 class Character 
   
-  attr_accessor :id, :name, :occupation, :image, :nickname , :actor
+  attr_accessor :id, :name, :occupation, :nickname , :actor
   
   @@all = []
   
