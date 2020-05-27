@@ -1,5 +1,7 @@
 require_relative "../test/cli/version"
 require_relative "../test/cli/cli_class"
+require_relative "../test/cli/api_class"
+require_relative "../test/cli/character_class"
 
 require 'pry'
 require 'net/http'

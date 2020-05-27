@@ -1,9 +1,10 @@
 require 'pry'
 
-class Cli 
+class CLI
   
   def call 
     puts "Welcome to Braking Bad Tv show facts!"
-    # binding.pry
+    
+    
   end 
 end 

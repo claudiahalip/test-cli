@@ -3,6 +3,8 @@
 require_relative "../lib/test/cli"
 
 
+
 puts "Hello!"
 
-Cli.new.call
+#CLI.new.call
+API.new.get_characters
