@@ -7,7 +7,8 @@ require 'pry'
 require 'net/http'
 require 'json'
   
-  
+#require 'bundler/setup'  
+#Bundler.require(:cli)
 
 module Test
   module Cli

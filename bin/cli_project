@@ -4,7 +4,7 @@ require_relative "../lib/test/cli"
 
 
 
-puts "Hello!"
+puts "Hello! I'm in Run(cli_project)"
 
-#CLI.new.call
+CLI.new.call
 API.new.get_characters
