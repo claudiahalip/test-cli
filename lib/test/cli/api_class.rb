@@ -4,7 +4,7 @@ class API
   
   def get_characters
     
-    puts "I'm in API"
+    
     
     url = "https://www.breakingbadapi.com/api/characters"
     uri = URI(url)

@@ -3,25 +3,42 @@ require 'pry'
 class CLI
   
   def call 
-    puts "I'm in CLI"
-    puts "Welcome to Braking Bad Tv show facts!"   #1.greeting
     
-                                                 # 2. ask user if he wants to see a list of characters(optional or display the list of characters in the same time with the greeting)
-                                                 
-# 3. display the list  characters of Braking Bad TV show
-
-# 4.ask user for input (what character )
-# 5.display  "character name " and a  list with four other options : 1.character_nickname,  
-#           2.actor_who_played, 3.status, 4. quote
-# 6.ask user what do they want to know about character (chose one option)
-# 7.display the info chosen 
-# 8. option to chose another character or exit
+    puts "Welcome to 'Breaking Bad' Tv show facts!"   
+    
+    API.new.get_characters
+    
+    self.list_characters
+    
+    
+  end
   
+  def list_characters
+    puts "Do you want to see a list of all the characters?"
+    puts "'yes' to continue , any other key for 'exit'"
+    input = gets.chomp.downcase
+    
+    if input == "yes"
+      puts "Here is a list with all the characters:"
+      display_list_ch
+    else
+      puts "Bye!Come back later."
+    end 
+    
+    
   end 
   
   
+  def display_list_ch
+    Character.all.each_with_index do |ch, index|
+      puts "#{index+1}.#{ch.name}"
+    end
+    
+  end
   
   
   
   
-end 
+  
+  
+end   
