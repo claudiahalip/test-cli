@@ -1,4 +1,8 @@
 #!/usr/bin/env ruby
 
+require_relative "../lib/test/cli"
+
 
 puts "Hello!"
+
+Cli.new.call

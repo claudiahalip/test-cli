@@ -1,4 +1,5 @@
-require "test/cli/version"
+require_relative "../test/cli/version"
+require_relative "../test/cli/cli_class"
 
 module Test
   module Cli
