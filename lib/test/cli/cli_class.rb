@@ -30,6 +30,7 @@ class CLI
       puts "------------------------------"
       character_choise
       puts "------------------------------"
+      sleep(1)
       list_characters
       puts "------------------------------"
     else
@@ -50,7 +51,7 @@ class CLI
     puts "------------------------------"
     index = gets.chomp.to_i - 1
     
-    until index.between?(1, Character.all.length - 1)
+    until index.between?(0, Character.all.length - 1)
       puts "Sorry, this is an invalid choice.Please enter another number"
       index = gets.chomp.to_i - 1
     end 
@@ -89,8 +90,8 @@ class CLI
   #--------------------------
   
   def display_list_ch
-    Character.all.each_with_index do |ch, index|
-      puts "#{index+1}.#{ch.name}"
+    Character.all.each.with_index(1) do |ch, index|
+      puts "#{index}. #{ch.name}"
     end
     
   end
