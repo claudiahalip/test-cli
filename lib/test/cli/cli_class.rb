@@ -31,8 +31,7 @@ class CLI
   
   def character_choise
     
-    puts "What character are you interesting in?"
-    puts "Intoduce a number for your choise."
+    puts "What character are you interesting in? Enter a number, please!"
     index = gets.chomp.to_i - 1
     
     until index.between?(1, Character.all.length - 1)
@@ -44,11 +43,21 @@ class CLI
     
     ch_inst = Character.all[index]
     
-    character_details
+    character_details(ch_inst)
     
   end
   
-  def character_details
+  def character_details(ch_inst)
+    sleep(1)
+    puts ch_inst.name
+    sleep(1)
+    puts "\nHis occupation is: #{ch_inst.occupation.join()}"
+    sleep(1)
+    puts "\nand his nickname is #{ch_inst.nickname}"
+    sleep(1)
+    puts "\nThis character was portreyed  by #{ch_inst.actor}"
+    
+
     
   end 
   
