@@ -17,15 +17,15 @@ class CLI
   
   def list_characters
     puts "Do you want to see a list of all the characters?"
-    puts "------------------------------"
+    puts "\n"
     puts "'yes' to continue , any other key for 'exit'"
-    puts "------------------------------"
+    puts "\n"
     input = gets.chomp.downcase
     
     if input == "yes"
       puts "Here is a list with all the characters:"
       puts "------------------------------"
-      sleep(4)
+      sleep(1)
       display_list_ch
       puts "------------------------------"
       character_choise
@@ -36,17 +36,22 @@ class CLI
       puts "Bye!Come back later."
     end 
     
-   #-------------------------- 
+   
   end 
+  
+  
+  #-------------------------- 
+  
+  
   
   def character_choise
     
-    puts "What character are you interesting in? Enter a number, please!"
+    puts "What character are you interested in? Enter a number, please!"
     puts "------------------------------"
     index = gets.chomp.to_i - 1
     
     until index.between?(1, Character.all.length - 1)
-      puts "Sorry, this is an invalid choise"
+      puts "Sorry, this is an invalid choice.Please enter another number"
       index = gets.chomp.to_i - 1
     end 
       
@@ -75,7 +80,7 @@ class CLI
     puts "------------------------------"
     sleep(1)
     puts "\nThis character was portreyed  by #{ch_inst.actor}"
-    puts "xxxxxxxxxxxxxxxxxxx"
+    puts "\n"
     
 
     
@@ -92,7 +97,4 @@ class CLI
   
   
   
-  
-  
-  
-end   
+  end   
