@@ -4,7 +4,7 @@ class CLI
   
   def call 
     
-    puts "Welcome to 'Breaking Bad'  facts!" 
+    puts "Welcome to 'Breaking Bad' Tv show facts!" 
     puts"========================="
     
     API.new.get_characters
@@ -16,14 +16,14 @@ class CLI
   #---------------------------
   
   def list_characters
-    puts "Do you want to know all the characters from Breaking Bad ?"
+    puts "Do you want to know all the characters of this show?"
     puts "\n"
     puts "enter 'y'  to continue , any other key to 'exit'"
     puts "\n"
     input = gets.chomp.downcase
     
     if input == "y"
-      puts "Here is a list with all the characters:"
+      puts "Here you can see a list with all the characters:"
       puts "------------------------------"
       sleep(1)
       display_list_ch
@@ -33,6 +33,7 @@ class CLI
       sleep(1)
       list_characters
       puts "------------------------------"
+      
     else
       puts "Bye!Come back later."
     end 
@@ -47,7 +48,7 @@ class CLI
   
   def character_choise
     
-    puts "What character are you interested in? Enter a number, please!"
+    puts "If you want to find out few facts about any character enter a number."
     puts "------------------------------"
     index = gets.chomp.to_i - 1
     
