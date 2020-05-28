@@ -33,7 +33,7 @@ class CLI
       quotes
       puts "\n"
       sleep(1)
-      puts "Now your back to the main menu."
+      puts "Now your back to the main page."
       list_characters
       puts "------------------------------"
       
@@ -78,7 +78,7 @@ class CLI
     puts ch_inst.name
     puts "------------------------------"
     sleep(1)
-    puts "\nHis/her occupation is: #{ch_inst.occupation.join()}"
+    puts "\nHis/her occupation is: #{ch_inst.occupation.join(", ")}."
     puts "------------------------------"
     sleep(1)
     puts "\nand his/her nickname is #{ch_inst.nickname}"
