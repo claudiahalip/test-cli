@@ -74,10 +74,10 @@ class CLI
     puts ch_inst.name
     puts "------------------------------"
     sleep(1)
-    puts "\nHis occupation is: #{ch_inst.occupation.join()}"
+    puts "\nHis/her occupation is: #{ch_inst.occupation.join()}"
     puts "------------------------------"
     sleep(1)
-    puts "\nand his nickname is #{ch_inst.nickname}"
+    puts "\nand his/her nickname is #{ch_inst.nickname}"
     puts "------------------------------"
     sleep(1)
     puts "\nThis character was portreyed  by #{ch_inst.actor}"

@@ -9,11 +9,11 @@ class API
     main_response = Net::HTTP.get(main_uri)
     h = JSON.parse(main_response)
     
-    # main_arr = []
-    # h.each do |k,v| 
-    #   main_arr << v
-    # end 
-    # binding.pry
+    url_arr = []
+    h.each do |k,v| 
+      url_arr << v
+    end 
+   
     
     url = "https://www.breakingbadapi.com/api/characters"
     uri = URI(url)

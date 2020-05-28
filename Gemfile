@@ -11,8 +11,3 @@ gem 'net-http'
 gemspec
 
 
-# group :cli do
-#   gem 'pry'
-#   gem 'json'
-#   gem 'net-http'
-# end 
