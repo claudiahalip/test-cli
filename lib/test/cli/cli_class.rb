@@ -10,7 +10,7 @@ class CLI
     API.new.get_characters
     
     self.list_characters
-    
+    API.new.get_quote
   end
   
   #---------------------------

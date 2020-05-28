@@ -2,6 +2,9 @@ require 'pry'
 
 class API
   
+  
+  
+  
   def get_characters
     
     main_url = "https://www.breakingbadapi.com/api/"
@@ -29,14 +32,24 @@ class API
       
     end 
     
-    quote_arr = JSON.parse( Net::HTTP.get(URI( h["quotes"])))
-    quote_arr.each do |q|
-      quote_inst = Ouote.new
-      
-    quote_inst.id = q["quote_id"]
-    quote_inst.quote = q["quote"]
-    quote_inst.author = q["author"]
+    
       
   end 
+  
+  
+  def get_quote
+    
+    quote_arr = JSON.parse( Net::HTTP.get(URI( h["quotes"])))
+    quote_arr.each do |q|
+      quote_inst = Quote.new
+      
+      quote_inst.id = q["quote_id"]
+      quote_inst.quote = q["quote"]
+      quote_inst.author = q["author"]
+    end 
+  end 
+  
+  
+   
   
 end 
