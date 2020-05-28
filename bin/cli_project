@@ -8,3 +8,4 @@ require_relative "../lib/test/cli"
 
 CLI.new.call
 API.new.get_characters
+API.new.get_quote
