@@ -16,21 +16,24 @@ class CLI
   #---------------------------
   
   def list_characters
-    puts "Do you want to know all the characters of this show?"
+    puts "Do you want to know all the characters in this show?"
     puts "\n"
-    puts "enter 'y'  to continue , any other key to 'exit'"
+    puts "enter 'go' to continue and any other key to 'exit'"
     puts "\n"
     input = gets.chomp.downcase
     
-    if input == "y"
-      puts "Here you can see a list with all the characters:"
+    if input == "go"
+      puts "Here you can see the list with all the characters:"
       puts "------------------------------"
       sleep(1)
       display_list_ch
       puts "------------------------------"
       character_choise
       puts "------------------------------"
+      quotes
+      puts "\n"
       sleep(1)
+      puts "Now your back to the main menu."
       list_characters
       puts "------------------------------"
       
@@ -96,6 +99,20 @@ class CLI
     end
     
   end
+  
+  
+  def quotes 
+    puts "Do you want to see a quote from this character?"
+    puts "press 'y' to see it or any other key to go back to the main menu"
+    input = gets.chomp
+    if input == "y"
+      puts "quote: 'I am not in danger, Skyler. I am the danger!'"
+      puts"\n\n"
+      
+    else 
+      list_characters
+    end
+  end 
   
   
   
