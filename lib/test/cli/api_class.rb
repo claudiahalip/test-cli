@@ -4,7 +4,16 @@ class API
   
   def get_characters
     
+    main_url = "https://www.breakingbadapi.com/api/"
+    main_uri = URI(main_url)
+    main_response = Net::HTTP.get(main_uri)
+    h = JSON.parse(main_response)
     
+    # main_arr = []
+    # h.each do |k,v| 
+    #   main_arr << v
+    # end 
+    # binding.pry
     
     url = "https://www.breakingbadapi.com/api/characters"
     uri = URI(url)
