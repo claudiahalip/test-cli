@@ -25,7 +25,7 @@ class Character
     quote.character = self
   end
 
-  def quotes
+  def ch_quotes
     Quote.all.collect { |q| q.character == self} 
   end 
   

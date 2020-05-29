@@ -36,8 +36,6 @@ class CLI
       puts "Now your back to the main page."
       puts "------------------------------"
       list_characters
-      
-      
     else
       puts "Bye!Come back later."
     end 
@@ -102,13 +100,14 @@ class CLI
   end
   
   
-  def quotes 
+  def quotes
     puts "Do you want to see a quote from this character?"
     puts "press 'y' to see it or any other key to go back to the main menu"
     input = gets.chomp
     if input == "y"
       puts "quote: 'I am not in danger, Skyler. I am the danger!'"
-      puts "test "
+      puts "test } " #the quote of character chosen 
+
       puts"\n"
       
     end
