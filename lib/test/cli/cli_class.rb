@@ -8,9 +8,9 @@ class CLI
     puts"========================="
     
     API.new.get_characters
-    
     self.list_characters
-    #API.new.get_quote
+    API.new.get_quote
+    self.quotes
   end
   
   #---------------------------
@@ -34,8 +34,9 @@ class CLI
       puts "\n"
       sleep(1)
       puts "Now your back to the main page."
-      list_characters
       puts "------------------------------"
+      list_characters
+      
       
     else
       puts "Bye!Come back later."
@@ -107,10 +108,9 @@ class CLI
     input = gets.chomp
     if input == "y"
       puts "quote: 'I am not in danger, Skyler. I am the danger!'"
-      puts"\n\n"
+      puts "test "
+      puts"\n"
       
-    else 
-      list_characters
     end
   end 
   

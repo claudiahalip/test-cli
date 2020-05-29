@@ -34,7 +34,7 @@ class API
       
     end 
     
-    
+    get_quote
       
   end 
   
