@@ -101,14 +101,19 @@ class CLI
   
   def quotes(ch_inst)
     puts "Do you want to see some quotes from this character?"
-    puts "press 'y' to see it or any other key to go back to the main menu"
+    puts "press 'y' to see them or any other key to go back to the main menu"
     input = gets.chomp
     if input == "y"
-      
-      ch_inst.ch_quotes.each.with_index(1) do |q, index|
-        puts "#{index}. #{q.quote}"
+      if ch_inst.ch_quotes != []
+        puts "QUOTES"
+        ch_inst.ch_quotes.each.with_index(1) do |q, index|
+          puts "#{index}. #{q.quote}"
+        end
+      else
+        puts "QUOTES"
+        puts "There is no quote from this character at this moment."
       end
-      #puts "test #{ch_inst.ch_quotes} "   #the quote of character chosen 
+     
       
       puts"\n"
       
