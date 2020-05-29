@@ -42,6 +42,7 @@ class API
   def get_quote
     
     quote_arr = JSON.parse( Net::HTTP.get(URI(@@all["quotes"])))
+    
     quote_arr.each do |q|
       quote_inst = Quote.new
       

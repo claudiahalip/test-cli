@@ -34,8 +34,9 @@ class Character
   end 
 
   def ch_quotes
-    Quote.all.collect do |q| 
-      q.quote if q.character = self
+    Quote.all.select do |q| 
+      q.character == self
+      
     end 
     
   end 

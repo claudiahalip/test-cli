@@ -105,8 +105,8 @@ class CLI
     input = gets.chomp
     if input == "y"
       
-      ch_inst.ch_quotes.each.with_index do |q, index|
-        puts "#{index}. #{q}"
+      ch_inst.ch_quotes.each.with_index(1) do |q, index|
+        puts "#{index}. #{q.quote}"
       end
       #puts "test #{ch_inst.ch_quotes} "   #the quote of character chosen 
       
