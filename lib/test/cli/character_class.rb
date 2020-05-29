@@ -1,7 +1,7 @@
 class Character 
   
   attr_accessor :id, :name, :occupation, :nickname , :actor
-  attr_reader :quote 
+  
   
   @@all = []
   
@@ -12,6 +12,8 @@ class Character
   
   def self.all
     @@all
+    
+
   end 
   
 
@@ -25,8 +27,17 @@ class Character
     quote.character = self
   end
 
+  def add_quotes_by_character(name)
+    new_ch = Character.new(name)
+    add_quotes(name)
+
+  end 
+
   def ch_quotes
-    Quote.all.collect { |q| q.character == self} 
+    Quote.all.collect do |q| 
+      q.quote if q.character = self
+    end 
+    
   end 
   
 end 

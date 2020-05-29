@@ -10,10 +10,11 @@ class CLI
     API.new.get_characters
     self.list_characters
     API.new.get_quote
-    self.quotes
+    #self.quotes
   end
   
-  #---------------------------
+  
+
   
   def list_characters
     puts "Do you want to know all the characters in this show?"
@@ -30,11 +31,11 @@ class CLI
       puts "------------------------------"
       character_choise
       puts "------------------------------"
-      quotes
-      puts "\n"
-      sleep(1)
-      puts "Now your back to the main page."
-      puts "------------------------------"
+      # quotes
+      # puts "\n"
+      # sleep(1)
+      # puts "Now your back to the main page."
+      # puts "------------------------------"
       list_characters
     else
       puts "Bye!Come back later."
@@ -44,7 +45,7 @@ class CLI
   end 
   
   
-  #-------------------------- 
+  
   
   
   
@@ -59,16 +60,14 @@ class CLI
       index = gets.chomp.to_i - 1
     end 
       
-    
-    
     ch_inst = Character.all[index]
-    
     character_details(ch_inst)
+    quotes(ch_inst)
   end
   
   
   
-  #-------------------------
+  
   
   
   
@@ -100,14 +99,17 @@ class CLI
   end
   
   
-  def quotes
-    puts "Do you want to see a quote from this character?"
+  def quotes(ch_inst)
+    puts "Do you want to see some quotes from this character?"
     puts "press 'y' to see it or any other key to go back to the main menu"
     input = gets.chomp
     if input == "y"
-      puts "quote: 'I am not in danger, Skyler. I am the danger!'"
-      puts "test } " #the quote of character chosen 
-
+      
+      ch_inst.ch_quotes.each.with_index do |q, index|
+        puts "#{index}. #{q}"
+      end
+      #puts "test #{ch_inst.ch_quotes} "   #the quote of character chosen 
+      
       puts"\n"
       
     end

@@ -1,6 +1,6 @@
 class Quote
   
-  attr_accessor :id, :quote 
+  attr_accessor :id, :quote, :character
   attr_reader :character
   
   @@all = []
