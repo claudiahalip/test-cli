@@ -3,18 +3,16 @@ require 'pry'
 class CLI
   
   def call 
-    
+    puts"==========================================" 
     puts "Welcome to 'Breaking Bad' Tv show facts!" 
-    puts"========================="
+    puts"=========================================="
     
     API.new.get_characters
     self.list_characters
     API.new.get_quote
-    #self.quotes
+    
   end
   
-  
-
   
   def list_characters
     puts "Do you want to know all the characters in this show?"
@@ -31,22 +29,12 @@ class CLI
       puts "------------------------------"
       character_choise
       puts "------------------------------"
-      # quotes
-      # puts "\n"
-      # sleep(1)
-      # puts "Now your back to the main page."
-      # puts "------------------------------"
+      
       list_characters
     else
       puts "Bye!Come back later."
     end 
-    
-   
   end 
-  
-  
-  
-  
   
   
   def character_choise
@@ -67,10 +55,6 @@ class CLI
   
   
   
-  
-  
-  
-  
   def character_details(ch_inst)
     sleep(1)
     puts ch_inst.name
@@ -85,17 +69,13 @@ class CLI
     puts "\nThis character was portreyed  by #{ch_inst.actor}"
     puts "\n"
     
-
-    
   end 
   
-  #--------------------------
-  
+ 
   def display_list_ch
-    Character.all.each.with_index(1) do |ch, index|
+    Character.all.each.with_index(1) do | ch, index |
       puts "#{index}. #{ch.name}"
     end
-    
   end
   
   
@@ -106,20 +86,14 @@ class CLI
     if input == "y"
       if ch_inst.ch_quotes != []
         puts "QUOTES"
-        ch_inst.ch_quotes.each.with_index(1) do |q, index|
+        ch_inst.ch_quotes.each.with_index(1) do | q, index |
           puts "#{index}. #{q.quote}"
         end
       else
         puts "QUOTES"
         puts "There is no quote from this character at this moment."
       end
-     
-      
-      puts"\n"
-      
     end
   end 
   
-  
-  
-  end   
+end   

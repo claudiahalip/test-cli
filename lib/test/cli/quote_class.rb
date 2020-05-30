@@ -13,21 +13,14 @@ class Quote
     @character = Character.find_by_name(name)
   end 
   
-
   def save
     @@all << self
   end
 
 
-  
   def self.all
     @@all
   end 
 
 
-  
-
- 
-  
-  
 end 
