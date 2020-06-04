@@ -15,13 +15,13 @@ class API
     char_arr = JSON.parse( Net::HTTP.get(URI(@@all["characters"])))
     
     char_arr.each do |ch|
-      ch_inst = Character.new 
+      ch_inst = Character.new(ch) 
       
-      ch_inst.id = ch["char_id"]
-      ch_inst.name = ch["name"]
-      ch_inst.occupation =  ch["occupation"]
-      ch_inst.nickname = ch["nickname"]
-      ch_inst.actor = ch["portrayed"]
+      # ch_inst.id = ch["char_id"]
+      # ch_inst.name = ch["name"]
+      # ch_inst.occupation =  ch["occupation"]
+      # ch_inst.nickname = ch["nickname"]
+      # ch_inst.actor = ch["portrayed"]
       
     end 
     

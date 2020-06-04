@@ -4,9 +4,21 @@ class Character
   
   @@all = []
   
-  def initialize 
+  def initialize (hash)
+      @id = hash["char_id"]
+      @name = hash["name"]
+      @occupation = hash["occupation"]
+      @nickname = hash["nickname"]
+      @actor = hash["portrayed"]
+  
+
+
     @@all << self
   end 
+  
+  
+
+
 
   
   def self.all
@@ -21,7 +33,7 @@ class Character
   end
 
 
-  def ch_quotes
+  def ch_quotes     #character has many quotes
     Quote.all.select do | q | 
       q.character == self
     end 
